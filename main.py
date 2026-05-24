@@ -4,7 +4,10 @@ from dotenv import load_dotenv
 from openai import OpenAI
 from typing import Optional
 
-load_dotenv()
+try:
+    load_dotenv()
+except Exception:
+    pass
 
 app = FastAPI()
 client = OpenAI()
