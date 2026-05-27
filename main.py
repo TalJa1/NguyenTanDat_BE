@@ -31,7 +31,7 @@ async def chat(request: ChatRequest) -> ChatResponse:
         content.append({"type": "image_url", "image_url": {"url": url}})
 
     response = client.chat.completions.create(
-        model="gpt-4o",
+        model="gpt-4.1-nano",
         max_tokens=1024,
         messages=[{"role": "user", "content": content}],
     )
